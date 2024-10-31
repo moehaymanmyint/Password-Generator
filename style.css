@@ -1,0 +1,63 @@
+.frame{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: larger;
+}
+
+.generated-password{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.password-status,
+.password-length{
+    display: flex;
+}
+
+.range{
+    width: 100%;
+}
+
+.container{
+    background-color: rgb(196, 236, 255);
+    padding: 20px 40px;
+    border-radius: 15px;
+}
+
+span{
+    color: green;
+    font-weight: bold;
+}
+
+button{
+    padding: 8px 12px;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    background-color: brown;
+    color: white;
+    cursor: pointer;
+}
+
+.generate-btn{
+    display: flex;
+    justify-content: center;
+    margin: 15px;
+    font-size: 20px;
+}
+
+.uppercase,
+.lowercase,
+.numbers,
+.symbols{
+    margin: 10px;
+}
+
+input[type="checkbox"] {
+    width: 12px;
+    height: 12px;
+    transform: scale(1.5); 
+}
+
