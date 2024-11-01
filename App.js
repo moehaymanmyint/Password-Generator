@@ -7,8 +7,12 @@ let useUppercase = document.querySelector(".uppercase");
 let useLowercase = document.querySelector(".lowercase");
 let useNumbers = document.querySelector(".numbers");
 let useSymbols = document.querySelector(".symbols");
+let passwordLength = document.querySelector(".length");
 
 generateBtn.addEventListener("click", generatePassword);
+rangeInput.addEventListener("input", () => {
+    passwordLength.innerHTML = rangeInput.value; 
+});
 
 function generatePassword() {
     let length = rangeInput.value;
@@ -18,14 +22,22 @@ function generatePassword() {
     let symbols = useSymbols.checked;
 
     let charset = "";
-    if (upper) charset += "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    if (lower) charset += "abcdefghijklmnopqrstuvwxyz";
-    if (numbers) charset += "0123456789";
-    if (symbols) charset += "!@#$%^&*()_+[]{}|;:,.<>?";
+
+    if (upper) {
+        charset += "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    }
+    if (lower) {
+        charset += "abcdefghijklmnopqrstuvwxyz";
+    }
+    if (numbers) {
+        charset += "0123456789";
+    }
+    if (symbols) {
+        charset += "!@#$%^&*()_+[]{}|;:,.<>?";
+    }
 
     if (charset === "") {
-        alert("Please select at least one character type.");
-    return;
+        charset = "abcdefghijklmnopqrstuvwxyz0123456789";
     }
 
     let generatedPassword = "";

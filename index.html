@@ -8,19 +8,19 @@
 </head>
 <body>
     <div class="frame">
-        <h1>Password Generator</h1>
-        <p>Create strong passwords for your accounts in the blink of an eye.</p>
+        <h1 class="title">Password Generator</h1>
+        <p class="description">Create strong passwords to secure your accounts</p>
         <div class="container">
             <div class="generated-password">
                 <h1 class="password">YvwK@L6zNx1#</h1>
             </div>
             <hr>
             <div class="password-status">
-                <p>Password Strength: <span class="status">Strong</span></p>
+                <p>Password Strength: <span class="status"><strong>Strong</strong></span></p>
             </div>
             <hr>
             <div class="password-length">
-                <p>Password Length: </p>
+                <p>Password Length: <span class="length">12</span></p>
                 <input type="range" id="range" name="range" min="1" max="25" value="12" class="range">
             </div>
             <hr>
@@ -30,7 +30,7 @@
                 <input type="checkbox" name="" class="numbers">Use Numbers
                 <input type="checkbox" name="" class="symbols">Use Symbols
             </div>
-            <div class="generate-btn">
+            <div class="generated-button">
                 <button class="generate-btn">Generate Password</button>
             </div>
         </div>
